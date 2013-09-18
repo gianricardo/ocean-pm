@@ -34,8 +34,8 @@ public class Main {
             System.out.print("Problema na conexão com o Projeto");
         }
         
-        //projeto = comunicacao_projeto.RetornaProjeto("tcc2");
-        //System.out.println("Nome projeto:"+projeto.getNome());
+        projeto = comunicacao_projeto.RetornaProjeto("tcc2");
+        System.out.println("Nome projeto:"+projeto.getNome());
         //System.out.println("Descricao:"+projeto.getDescricao());
         
         
