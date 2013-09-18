@@ -35,8 +35,8 @@ public class Main {
         }
         
         projeto = comunicacao_projeto.RetornaProjeto("tcc2");
-        System.out.println("Nome projeto:"+projeto.getNome());
-        System.out.println("Descricao:"+projeto.getDescricao());
+        //System.out.println("Nome projeto:"+projeto.getNome());
+        //System.out.println("Descricao:"+projeto.getDescricao());
         
         
         
