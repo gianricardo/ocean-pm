@@ -21,11 +21,11 @@ import java.util.logging.Logger;
  */
 public class RedmineConector {
 
-    private RedmineManager conector;
-    private Project projeto;
-    private User currentUser;
-    private Tracker atividade;
-    private String host;
+    private static RedmineManager conector;
+    private static Project projeto;
+    private static User currentUser;
+    private static Tracker atividade;
+    private static String host;
     private static String redmineHost; 
     private static String apiAccessKey;
     
@@ -42,11 +42,12 @@ public class RedmineConector {
         } catch (RedmineException ex) {
             Logger.getLogger(RedmineConector.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         Projeto projeto_retorno = new Projeto();
         projeto_retorno.setDescricao(projeto.getDescription());
         projeto_retorno.setNome(projeto.getName());
         
-        atividade = new Tracker();
+        //atividade = new Tracker();
         
         
         return projeto_retorno;

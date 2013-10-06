@@ -6,15 +6,21 @@ package projeto;
 
 
 public class ComunicacaoProjetoImpl implements ComunicacaoProjeto {
-
+    private DadosExternosFacade conexao;
     
+    @Override
     public int VerificaDisp() {
-        return 1;
+        conexao = new DadosExternosFacade();
+       return  conexao.VerificarDisponibilidade();
     }
 
     @Override
     public Projeto RetornaProjeto(String nome) {
-        return null;
+        Projeto proj = new Projeto();
+        proj = conexao.RetornaProjeto(nome);
+        
+        return proj;
+        
     }
 
     @Override
