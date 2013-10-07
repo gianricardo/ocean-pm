@@ -4,6 +4,7 @@
  */
 package sistema;
 import java.rmi.*;
+import projeto.Projeto;
 
 /**
  *
@@ -11,5 +12,7 @@ import java.rmi.*;
  */
 public interface ComunicacaoRMI extends Remote{
     
-    void imprimirOla(String oqImprimir) throws RemoteException;
+    public void imprimirOla(String oqImprimir) throws RemoteException;
+    
+    public Projeto retornaProjeto(String nome) throws RemoteException;
 }

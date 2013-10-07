@@ -8,6 +8,7 @@ import java.rmi.*;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import javax.swing.*;
+import projeto.Projeto;
 
 /**
  *
@@ -43,5 +44,7 @@ public class Int_Grafica {
         registry = LocateRegistry.getRegistry(HOST, PORT);
         ComunicacaoRMI remoteApi = (ComunicacaoRMI) registry.lookup(ComunicacaoRMI.class.getSimpleName());
         remoteApi.imprimirOla(HOST);
+        Projeto proj = new Projeto();
+        proj = remoteApi.retornaProjeto("tcc2");
     }
 }
