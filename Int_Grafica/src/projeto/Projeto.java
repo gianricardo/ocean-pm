@@ -4,11 +4,13 @@
  */
 package projeto;
 
+import java.io.Serializable;
+
 /**
  *
  * @author gui
  */
-public class Projeto {
+public class Projeto implements Serializable {
     private String nome;
     private String descricao;
     private float custo_previsto;

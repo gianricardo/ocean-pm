@@ -8,7 +8,9 @@ import java.rmi.*;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import javax.swing.*;
+import org.jfree.chart.*;
 import projeto.Projeto;
+
 
 /**
  *
@@ -46,5 +48,12 @@ public class Int_Grafica {
         remoteApi.imprimirOla(HOST);
         Projeto proj = new Projeto();
         proj = remoteApi.retornaProjeto("tcc2");
+        System.out.println(proj.getDescricao());
+        System.out.println(proj.getNome());
+        
+        //JFreeChart free = new JFreeChart(null);
+        //free.
+       // StandardChartTheme tema = new StandardChartTheme("novo");
+        
     }
 }
