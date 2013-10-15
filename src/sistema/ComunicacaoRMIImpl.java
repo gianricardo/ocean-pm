@@ -37,9 +37,6 @@ public class ComunicacaoRMIImpl extends UnicastRemoteObject implements Comunicac
         }
         
         projeto = comunicacao_projeto.RetornaProjeto(nome);
-        System.out.println("Nome projeto:"+projeto.getNome());
-        System.out.println("Descricao:"+projeto.getDescricao());
-        
         return projeto;
     }
     

@@ -67,8 +67,8 @@ public class Main {
     throws RemoteException, AlreadyBoundException {
 
         registry.bind(name, remoteObj);
-        System.out.println("Registered: " + name + " -> " +
-        remoteObj.getClass().getName() + "[" + remoteObj + "]");
+        System.out.println("Registered: "+name+"->"+
+        remoteObj.getClass().getName()+"[" + remoteObj + "]");
 
     }
 }
