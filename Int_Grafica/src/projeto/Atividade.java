@@ -4,6 +4,7 @@
  */
 package projeto;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.Date;
 
@@ -11,7 +12,8 @@ import java.util.Date;
  *
  * @author gui
  */
-public class Atividade {
+public class Atividade implements Serializable{
+    
     private static String nome;
     private static Date data_inicio;
     private static Date data_fim;

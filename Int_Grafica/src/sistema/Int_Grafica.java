@@ -26,34 +26,21 @@ public class Int_Grafica {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-        // TODO code application logic here
-        /*ComunicacaoRMI objetoRemoto;
-        String dados;
-        
-        try{
-            objetoRemoto = (ComunicacaoRMI) Naming.lookup("//localhost/ObjetoServidor");
-            dados = JOptionPane.showInputDialog(null,"Entre com:","Entrada de Dados",JOptionPane.QUESTION_MESSAGE);
-            objetoRemoto.imprimirOla(dados);
-        }
-        catch(RemoteException re){
-            JOptionPane.showMessageDialog(null,"Erro Remoto: "+re.toString(),"Erro Remoto",JOptionPane.WARNING_MESSAGE);
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(null,"Erro Local: "+e.toString(),"Erro Local",JOptionPane.WARNING_MESSAGE);
-        }*/
-        
+                
         //RMI
         registry = LocateRegistry.getRegistry(HOST, PORT);
         ComunicacaoRMI remoteApi = (ComunicacaoRMI) registry.lookup(ComunicacaoRMI.class.getSimpleName());
-        remoteApi.imprimirOla(HOST);
+        //remoteApi objeto para carregar os dados via RMI;
+        
+        
         Projeto proj = new Projeto();
         proj = remoteApi.retornaProjeto("tcc2");
         System.out.println(proj.getDescricao());
         System.out.println(proj.getNome());
         
-        //JFreeChart free = new JFreeChart(null);
-        //free.
-       // StandardChartTheme tema = new StandardChartTheme("novo");
-        
+        /*JFreeChart free = new JFreeChart(null);
+        StandardChartTheme tema = new StandardChartTheme("novo");
+        tema.apply(free);
+        */
     }
 }
