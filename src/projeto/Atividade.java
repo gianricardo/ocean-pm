@@ -4,6 +4,7 @@
  */
 package projeto;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.Date;
 
@@ -11,68 +12,68 @@ import java.util.Date;
  *
  * @author gui
  */
-public class Atividade {
-    private static String nome;
-    private static Date data_inicio;
-    private static Date data_fim;
-    private static Membro_equipe responsavel;
-    private static Array colaboradores;
-    private static String status;
-    private static String descricao;
+public class Atividade implements Serializable{
+    private String nome;
+    private Date data_inicio;
+    private Date data_fim;
+    private Membro_equipe responsavel;
+    private Array colaboradores;
+    private String status;
+    private String descricao;
 
-    public static String getNome() {
+    public  String getNome() {
         return nome;
     }
 
-    public static void setNome(String aNome) {
+    public void setNome(String aNome) {
         nome = aNome;
     }
 
-    public static Date getData_inicio() {
+    public  Date getData_inicio() {
         return data_inicio;
     }
 
-    public static void setData_inicio(Date aData_inicio) {
+    public  void setData_inicio(Date aData_inicio) {
         data_inicio = aData_inicio;
     }
 
-    public static Date getData_fim() {
+    public  Date getData_fim() {
         return data_fim;
     }
 
-    public static void setData_fim(Date aData_fim) {
+    public void setData_fim(Date aData_fim) {
         data_fim = aData_fim;
     }
 
-    public static Membro_equipe getResponsavel() {
+    public Membro_equipe getResponsavel() {
         return responsavel;
     }
 
-    public static void setResponsavel(Membro_equipe aResponsavel) {
+    public void setResponsavel(Membro_equipe aResponsavel) {
         responsavel = aResponsavel;
     }
 
-    public static Array getColaboradores() {
+    public  Array getColaboradores() {
         return colaboradores;
     }
 
-    public static void setColaboradores(Array aColaboradores) {
+    public void setColaboradores(Array aColaboradores) {
         colaboradores = aColaboradores;
     }
 
-    public static String getStatus() {
+    public  String getStatus() {
         return status;
     }
 
-    public static void setStatus(String aStatus) {
+    public void setStatus(String aStatus) {
         status = aStatus;
     }
 
-    public static String getDescricao() {
+    public  String getDescricao() {
         return descricao;
     }
 
-    public static void setDescricao(String aDescricao) {
+    public void setDescricao(String aDescricao) {
         descricao = aDescricao;
     }
     

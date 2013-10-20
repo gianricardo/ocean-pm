@@ -12,6 +12,10 @@ public class ComunicacaoVersoesImpl implements ComunicacaoVersoes{
     
     private DadosExternosFacade conexao;
     
+    public int VerificaDisp(){
+       return conexao.verificaDisp();
+    }
+    
     @Override
     public Versoes[] retornaVersoes() {
        return conexao.retornaVersoes();

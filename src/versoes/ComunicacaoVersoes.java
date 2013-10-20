@@ -13,5 +13,6 @@ public interface ComunicacaoVersoes {
     public Versoes[] retornaVersoes();
     public float versaoAtual();
     public Versoes dadosVersao(float num_versao);
+    public int VerificaDisp();
     
 }
