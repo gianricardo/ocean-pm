@@ -4,38 +4,49 @@
  */
 package projeto;
 
+import java.io.Serializable;
+
 /**
  *
  * @author gui
  */
-public class Membro_equipe {
+public class Membro_equipe implements Serializable{
     
-    private static String nome;
-    private static String cargo;
-    private static float valor_hora_trabalho;
+    private String nome;
+    private String cargo;
+    private float valor_hora_trabalho;
+    private String email;
 
-    public static String getNome() {
+    public  String getNome() {
         return nome;
     }
 
-    public static void setNome(String aNome) {
+    public  void setNome(String aNome) {
         nome = aNome;
     }
 
-    public static String getCargo() {
+    public  String getCargo() {
         return cargo;
     }
 
-    public static void setCargo(String aCargo) {
+    public  void setCargo(String aCargo) {
         cargo = aCargo;
     }
 
-    public static float getValor_hora_trabalho() {
+    public  float getValor_hora_trabalho() {
         return valor_hora_trabalho;
     }
 
-    public static void setValor_hora_trabalho(float aValor_hora_trabalho) {
+    public  void setValor_hora_trabalho(float aValor_hora_trabalho) {
         valor_hora_trabalho = aValor_hora_trabalho;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
 }
