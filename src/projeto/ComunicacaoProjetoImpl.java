@@ -4,6 +4,10 @@
  */
 package projeto;
 
+import com.taskadapter.redmineapi.RedmineException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class ComunicacaoProjetoImpl implements ComunicacaoProjeto {
     private DadosExternosFacade conexao;
@@ -17,15 +21,16 @@ public class ComunicacaoProjetoImpl implements ComunicacaoProjeto {
     @Override
     public Projeto RetornaProjeto(String nome) {
         Projeto proj = new Projeto();
-        proj = conexao.RetornaProjeto(nome);
+        try {
+            proj = conexao.RetornaProjeto(nome);
+        } catch (RedmineException ex) {
+            Logger.getLogger(ComunicacaoProjetoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         return proj;
         
     }
 
-    @Override
-    public Atividade[] RetornaAtividades() {
-        return null;
-    }
+   
     
 }

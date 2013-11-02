@@ -6,6 +6,7 @@ package projeto;
 
 import java.io.Serializable;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -17,10 +18,20 @@ public class Atividade implements Serializable{
     private Date data_inicio;
     private Date data_fim;
     private Membro_equipe responsavel;
-    private Array colaboradores;
+    private Membro_equipe criador;
+    private ArrayList<Membro_equipe> colaboradores;
     private String status;
     private String descricao;
-
+    private String categoria;
+    private String prioridade;
+    private float horas_prevista;
+    private float horas_utilizadas;
+    
+    
+    public Atividade(){
+       colaboradores = new ArrayList<Membro_equipe>(); 
+    }
+    
     public  String getNome() {
         return nome;
     }
@@ -53,11 +64,11 @@ public class Atividade implements Serializable{
         responsavel = aResponsavel;
     }
 
-    public  Array getColaboradores() {
+    public  ArrayList<Membro_equipe> getColaboradores() {
         return colaboradores;
     }
 
-    public void setColaboradores(Array aColaboradores) {
+    public void setColaboradores(ArrayList<Membro_equipe> aColaboradores) {
         colaboradores = aColaboradores;
     }
 
@@ -75,6 +86,46 @@ public class Atividade implements Serializable{
 
     public void setDescricao(String aDescricao) {
         descricao = aDescricao;
+    }
+
+    public Membro_equipe getCriador() {
+        return criador;
+    }
+
+    public void setCriador(Membro_equipe criador) {
+        this.criador = criador;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(String prioridade) {
+        this.prioridade = prioridade;
+    }
+
+    public float getHoras_prevista() {
+        return horas_prevista;
+    }
+
+    public void setHoras_prevista(float horas_prevista) {
+        this.horas_prevista = horas_prevista;
+    }
+
+    public float getHoras_utilizadas() {
+        return horas_utilizadas;
+    }
+
+    public void setHoras_utilizadas(float horas_utilizadas) {
+        this.horas_utilizadas = horas_utilizadas;
     }
     
 }

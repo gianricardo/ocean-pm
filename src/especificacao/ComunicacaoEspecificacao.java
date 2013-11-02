@@ -11,7 +11,7 @@ package especificacao;
 public interface ComunicacaoEspecificacao {
     
     public int VerificaDisp();
-    public Documento retornaDocumento(String nome);
+    public Documento retornaDocumento(String nome_projeto, String nome_documento);
     public String ListaDocumentosDisp();
     
     

@@ -13,12 +13,12 @@ public class ComunicacaoEspecificacaoImpl implements ComunicacaoEspecificacao{
     
     @Override
     public int VerificaDisp() {
-        return conexao.VerificaDisp();
+        return conexao.VerificarDisponibilidade();
     }
 
     @Override
-    public Documento retornaDocumento(String nome) {
-        return conexao.retornaDocumento(nome);
+    public Documento retornaDocumento(String nome_projeto, String nome_documento) {
+        return conexao.retornaDocumento(nome_projeto, nome_documento);
     }
 
     @Override

@@ -12,7 +12,7 @@ public interface ComunicacaoProjeto {
     
     public int VerificaDisp();
     public Projeto RetornaProjeto(String nome);
-    public Atividade[] RetornaAtividades();
+    
     
     
 }

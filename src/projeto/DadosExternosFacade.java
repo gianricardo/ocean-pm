@@ -4,6 +4,8 @@
  */
 package projeto;
 
+import com.taskadapter.redmineapi.RedmineException;
+
 /**
  *
  * @author gui
@@ -22,7 +24,7 @@ public class DadosExternosFacade {
         return 1;
     }
     
-    public Projeto RetornaProjeto(String nome){
+    public Projeto RetornaProjeto(String nome) throws RedmineException{
         Projeto proj = new Projeto();
         proj = conector.RetornaProjeto(nome);
         return proj;
