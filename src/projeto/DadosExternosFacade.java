@@ -5,6 +5,7 @@
 package projeto;
 
 import com.taskadapter.redmineapi.RedmineException;
+import java.util.ArrayList;
 
 /**
  *
@@ -30,5 +31,20 @@ public class DadosExternosFacade {
         return proj;
         
     }
+    
+    public int totalAtividades(String nome) throws RedmineException{
+        return conector.totalAtividades(nome);
+        
+    }
+    
+    public int[] quatidadeDeAtividadesPorPrioridade(String nome) throws RedmineException{
+        return conector.quatidadeDeAtividadesPorPrioridade(nome);
+    }
+    
+    public int[] quantidadeDeAtividadesPorStatus(String nome) throws RedmineException{
+        return conector.quantidadeDeAtividadesPorStatus(nome);
+    }
+    
+    
     
 }

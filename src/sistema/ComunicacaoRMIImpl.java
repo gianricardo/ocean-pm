@@ -5,13 +5,18 @@
 package sistema;
 import Riscos.ComunicacaoRiscos;
 import Riscos.Riscos;
+import com.taskadapter.redmineapi.RedmineException;
 import especificacao.ComunicacaoEspecificacao;
 import especificacao.Documento;
 import javax.rmi.PortableRemoteObject;
 import java.rmi.*;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import projeto.ComunicacaoProjetoImpl;
 import projeto.Projeto;
+import projeto.QuantAtividades;
 import testes.ComunicacaoTestes;
 import testes.Teste;
 import versoes.ComunicacaoVersoes;
@@ -124,5 +129,31 @@ public class ComunicacaoRMIImpl extends UnicastRemoteObject implements Comunicac
         }
         
     }
+    
+    @Override
+    public float tempoEstimadoProjeto(String nome) throws RemoteException{
+        return comunicacao_projeto.tempoEstimadoProjeto(nome);
+    }
+        
+        
+    
+    
+    @Override
+   public float tempoGastoProjeto(String nome) throws RemoteException{
+       return comunicacao_projeto.tempoEstimadoProjeto(nome);
+       
+   }
+    
+   public int totalAtividades(String nome) throws RemoteException{
+       return comunicacao_projeto.totalAtividades(nome);
+   }
+   
+   public int[] quatidadeDeAtividadesPorPrioridade(String nome) throws RemoteException{
+       return comunicacao_projeto.quatidadeDeAtividadesPorPrioridade(nome);
+   }
+   
+   public int[] quantidadeDeAtividadesPorStatus(String nome) throws RemoteException{
+       return comunicacao_projeto.quantidadeDeAtividadesPorStatus(nome);
+   }
     
 }

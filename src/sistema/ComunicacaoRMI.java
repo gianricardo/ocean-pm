@@ -6,8 +6,10 @@ package sistema;
 import Riscos.Riscos;
 import especificacao.Documento;
 import java.rmi.*;
+import java.util.ArrayList;
 import projeto.Atividade;
 import projeto.Projeto;
+import projeto.QuantAtividades;
 import testes.Teste;
 import versoes.Versoes;
 
@@ -26,4 +28,10 @@ public interface ComunicacaoRMI extends Remote{
    public Versoes[] retornaVersoes()throws RemoteException;
    public float versaoAtual()throws RemoteException;
    public Versoes dadosVersao(float num_versao)throws RemoteException;
+   public float tempoEstimadoProjeto(String nome) throws RemoteException;
+   public float tempoGastoProjeto(String nome) throws RemoteException;
+   public int totalAtividades(String nome) throws RemoteException;
+   public int[] quatidadeDeAtividadesPorPrioridade(String nome) throws RemoteException;
+   public int[] quantidadeDeAtividadesPorStatus(String nome) throws RemoteException;
+   
 }
