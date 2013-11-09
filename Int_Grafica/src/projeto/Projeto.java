@@ -25,6 +25,8 @@ public class Projeto implements Serializable {
     private Date data_criacao;
     private Date ultima_atualizacao;
     private String pagina_web;
+    private float horas_pŕevista;
+    private float horas_gastas;
 
     public Projeto(){
        atividades = new ArrayList<Atividade>();
@@ -116,6 +118,22 @@ public class Projeto implements Serializable {
 
     public void setPagina_web(String pagina_web) {
         this.pagina_web = pagina_web;
+    }
+
+    public float getHoras_pŕevista() {
+        return horas_pŕevista;
+    }
+
+    public void setHoras_pŕevista(float horas_pŕevista) {
+        this.horas_pŕevista = horas_pŕevista;
+    }
+
+    public float getHoras_gastas() {
+        return horas_gastas;
+    }
+
+    public void setHoras_gastas(float horas_gastas) {
+        this.horas_gastas = horas_gastas;
     }
     
 }

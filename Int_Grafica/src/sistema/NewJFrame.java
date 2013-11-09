@@ -72,6 +72,11 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jLabel2.setText("jLabel2");
 
@@ -198,6 +203,10 @@ public class NewJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowOpened
     
     private class FormListener implements java.awt.event.ActionListener, java.awt.event.WindowListener {
         FormListener() {}
@@ -288,19 +297,7 @@ public class NewJFrame extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     
    
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {                                  
-        // TODO add your handling code here:
-        jPanel1.add(createBarChart1());
-        //
-        jPanel2.add(createBarChart1());
-        //
-        jPanel6.add(createBarChart1());
-        //
-        jPanel7.add(createBarChart1());
-        
-        
-        
-    }
+  
 
     
     

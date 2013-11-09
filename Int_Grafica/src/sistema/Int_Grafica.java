@@ -11,6 +11,8 @@ import java.awt.geom.Rectangle2D;
 import java.rmi.*;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 import org.jfree.chart.*;
 import org.jfree.chart.plot.Plot;
@@ -35,7 +37,7 @@ public class Int_Grafica {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-                
+         /*       
         //RMI
         registry = LocateRegistry.getRegistry(HOST, PORT);
         ComunicacaoRMI remoteApi = (ComunicacaoRMI) registry.lookup(ComunicacaoRMI.class.getSimpleName());
@@ -52,14 +54,20 @@ public class Int_Grafica {
         System.out.println(proj.getDescricao());
         System.out.println(proj.getNome());
         System.out.println(proj.getAtividades().get(0).getResponsavel().getNome()); 
-        
+        */
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                VariosGraficos vg = new VariosGraficos();
-                
-               vg.setVisible(true);
-               vg.setTitle("Gerenciamento de Projeto");
+                VariosGraficos vg = null;
+                try {
+                    vg = new VariosGraficos();
+                } catch (RemoteException ex) {
+                    Logger.getLogger(Int_Grafica.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (NotBoundException ex) {
+                    Logger.getLogger(Int_Grafica.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                vg.setVisible(true);
+                vg.setTitle("Gerenciamento de Projeto");
                
             }
         });
